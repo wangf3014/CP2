@@ -25,7 +25,7 @@ python main.py --data PATH_TO_YOUR_IMAGENET \
 In CP2 we presented an efficient pretraining protocol, named Quick Tuning. For this protocol, you should first edit the config file `config/config_pretrain.py`, setting the `pretrained_path` to you pretrained backbone.
 
 ## Finetuning
-We recommend finetuning on multiple GPUs.
+We recommend finetuning on multiple GPUs. For finetuning, you should first specify `pretrain_path` and `data_root` in `config/config_finetune.py`
 ```
 # Please specify the NUM_GPU and YOUR_WORK_DIR
 ./tools/dist_train.sh configs/config_finetune.py NUM_GPU --work-dir YOUR_WORK_DIR
