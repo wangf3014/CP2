@@ -30,7 +30,7 @@ We recommend finetuning on multiple GPUs.
 # Please specify the NUM_GPU and YOUR_WORK_DIR
 ./tools/dist_train.sh configs/config_finetune.py NUM_GPU --work-dir YOUR_WORK_DIR
 ```
-If using a part of GPUs on your device, you should run finetuning with the following code:
+If using a part of GPUs on your device (e.g. 4/8), you should run finetuning with the following code:
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=23333 ./tools/dist_train.sh configs/config_finetune.py NUM_GPU --work-dir YOUR_WORK_DIR
 ```
