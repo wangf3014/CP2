@@ -3,6 +3,11 @@
 This repo is the codebase of CP2.
 * [CP2: Copy-Paste Contrastive Pretraining for Semantic Segmentation](https://arxiv.org/abs/2203.11709), in ECCV 2022.
 
+## Pretrained Models
+The pretrained CP2 models are available as below:
+- CP2 from scratch: [cp2-r50-aspp-200ep.pth](https://drive.google.com/file/d/1VUS3PTio-djiPMCWJGA_eqpJM2yRks5W/view?usp=sharing) [cp2-r50-aspp-600ep.pth](https://drive.google.com/file/d/1HioGDeGJaimk9zjKQ1dQqUUPQWBB-w6g/view?usp=sharing)
+- CP2 Quick Tuning (20ep) from MoCo v2 models: [cp2-r50-aspp-820ep.pth](https://drive.google.com/file/d/1hr-SEaX1npAEVv7qmBKmv0e1VdmfJ3Ww/view?usp=sharing) [cp2-vits16-aspp-320ep.pth](https://drive.google.com/file/d/1vLTmBl9qvcwmyS3JFQ3ZHGQTmQ6E-Sct/view?usp=sharing)
+
 ## Installation
 The implementation is built on top of [mmseg](https://github.com/open-mmlab/mmsegmentation) and [moco](https://github.com/facebookresearch/moco). Please install with the following steps:
 ```
