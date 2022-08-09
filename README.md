@@ -22,12 +22,19 @@ chmod u+x tools/dist_train.sh
 ```
 
 ## Pretraining
+For pretraining CP2 from scratch, run the following command:
 ```
 python main.py --data PATH_TO_YOUR_IMAGENET \
     --config config/config_pretrain.py \
     --epochs 200 --lr 0.015 -b 256
 ```
-In CP2 we presented an efficient pretraining protocol, named Quick Tuning. For this protocol, you should first edit the config file `config/config_pretrain.py`, setting the `pretrained_path` to your pretrained backbone.
+
+For Quick Tuning, you should first edit the config file `config/config_pretrain.py`, setting the `pretrained_path` to your pretrained backbone, and run the command below:
+```
+python main.py --data PATH_TO_YOUR_IMAGENET \
+    --config config/config_pretrain.py \
+    --epochs 20 --lr 0.015 -b 256
+```
 
 ## Finetuning
 We recommend finetuning on multiple GPUs. For finetuning, you should first specify `pretrain_path` and `data_root` in `config/config_finetune.py`
